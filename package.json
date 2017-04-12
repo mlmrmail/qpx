@@ -10,10 +10,13 @@
     "type": "git",
     "url": "git+https://github.com/mlmrmail/qpx.git"
   },
-  "author": "",
+  "author": "Phogon",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/mlmrmail/qpx/issues"
   },
-  "homepage": "https://github.com/mlmrmail/qpx#readme"
+  "homepage": "https://github.com/mlmrmail/qpx#readme",
+  "dependencies": {
+    "joi": "^10.4.1"
+  }
 }
