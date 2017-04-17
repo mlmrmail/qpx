@@ -4,7 +4,7 @@
   "description": "Google Flights API - Node",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "node controllers/qpx/test.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,6 +20,7 @@
   "dependencies": {
     "express": "^4.15.2",
     "joi": "^10.4.1",
+    "lodash": "^4.17.4",
     "superagent": "^3.5.2"
   }
 }
