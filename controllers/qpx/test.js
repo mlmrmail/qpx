@@ -1,5 +1,5 @@
 const _ = require('lodash');
-const input = require('./outpout');
+// const input = require('./outpout');
 const superagent = require('superagent');
 
 // function getTotalNumberOfSolutions(response) {
@@ -82,11 +82,11 @@ function getSliceDetails(response, solutionNumber, sliceNumber) {
       tempObj.flight = getDataEntitytPropertyValue(response, dataType.properties[dataType.CARRIER].name, segment.flight.carrier).name + ' ' + segment.flight.carrier + ' ' + segment.flight.number;
       tempObj.segmentId = segment.id;
       tempObj.origin = leg.origin;
-      tempObj.originFull = getDataEntitytPropertyValue(response, dataType.properties[dataType.CITIES].name, leg.origin).name;
+      tempObj.originFull = getDataEntitytPropertyValue(response, dataType.properties[dataType.AIRPORTS].name, leg.origin).name;
       tempObj.departureTime = leg.departureTime;
       tempObj.originTerminal = leg.originTerminal;
       tempObj.destination = leg.destination;
-      tempObj.destinationFull = getDataEntitytPropertyValue(response, dataType.properties[dataType.CITIES].name, leg.destination).name;
+      tempObj.destinationFull = getDataEntitytPropertyValue(response, dataType.properties[dataType.AIRPORTS].name, leg.destination).name;
       tempObj.arrivalTime = leg.arrivalTime;
       tempObj.destinationTerminal = leg.destinationTerminal;
       tempObj.duration = leg.duration;
@@ -266,29 +266,29 @@ function getStarted(request) {
 // console.log(getTotalNumberOfSolutions(input.jsonOutputOneWay()));
 // console.log(JSON.stringify(getDetailsOfSolution(input.jsonOutputTwoWay(),0)));
 const req = {
-  request: {
-    slice: [
-      {
-        origin: 'MSY',
-        destination: 'BOS',
-        date: '2017-04-18',
-      },
-      {
-        origin: 'BOS',
-        destination: 'LAS',
-        date: '2017-04-19',
-      },
-    ],
-    passengers: {
-      adultCount: 1,
-      infantInLapCount: 0,
-      infantInSeatCount: 0,
-      childCount: 0,
-      seniorCount: 0,
-    },
-    solutions: 1,
-    refundable: false,
-  },
+    "request": {
+        "slice": [
+            {
+                "origin": "BEY",
+                "destination": "BOS",
+                "date": "2017-04-21"
+            },
+            {
+                "origin": "BOS",
+                "destination": "BEY",
+                "date": "2017-04-26"
+            }
+        ],
+        "passengers": {
+            "adultCount": 1,
+            "infantInLapCount": 0,
+            "infantInSeatCount": 0,
+            "childCount": 0,
+            "seniorCount": 0
+        },
+        "solutions": 3,
+        "refundable": false
+    }
 };
 
 

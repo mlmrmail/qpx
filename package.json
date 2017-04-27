@@ -4,7 +4,7 @@
   "description": "Google Flights API - Node",
   "main": "app.js",
   "scripts": {
-    "start": "node controllers/qpx/test.js",
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
